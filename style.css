@@ -2,10 +2,6 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
-* {
-    margin: 0;
-    padding: 0;
-}
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
@@ -104,61 +100,6 @@ h6 {
   }
 }
 
- /* Login Window Styles */
- #login-window {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.login-container {
-  background-color: rgb(245, 248, 243);
-  border: 1px solid #0f0808;
-  padding: 20px;
-  width: 300px;
-  max-width: 90%;
-  text-align: center;
-}
-
-.login-container h3 {
-  margin-bottom: 20px;
-}
-
-.login-container label {
-  display: block;
-  margin-bottom: 5px;
-  text-align: left;
-}
-
-.login-container select,
-.login-container input {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
-  border: 1px solid #0f0808;
-  border-radius: 4px;
-  box-sizing: border-box;
-}
-
-.login-container .button-container {
-  text-align: center;
-  margin-top: 10px;
-}
-
-.login-container button {
-  padding: 10px 20px;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
-
-.login-container button:hover {
-  background-color: #45a049;
-}
-
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
@@ -168,8 +109,13 @@ h6 {
   padding: 15px 0;
 }
 
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: rgba(0, 0, 0, 0.8);
+}
+
 #header .logo {
-  font-size: 32px;
+  font-size: 23px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -191,6 +137,32 @@ h6 {
 }
 
 /*--------------------------------------------------------------
+#  Get Startet Button
+--------------------------------------------------------------*/
+.get-started-btn {
+  color: #fff;
+  border-radius: 4px;
+  padding: 7px 25px 8px 25px;
+  white-space: nowrap;
+  transition: 0.3s;
+  font-size: 14px;
+  display: inline-block;
+  border: 2px solid #ffc451;
+}
+
+.get-started-btn:hover {
+  background: #ffbb38;
+  color: #343a40;
+}
+
+@media (max-width: 992px) {
+  .get-started-btn {
+    padding: 7px 20px 8px 20px;
+    margin-right: 15px;
+  }
+}
+
+/*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
 /**
@@ -198,19 +170,6 @@ h6 {
 */
 .navbar {
   padding: 0;
-  position:fixed;
-  top: 0;
-  right: 0.3%;
-  left: 0.1%;
-  width: 100%;
-  background-color: #333;
-  color: #fff;
-  padding: 10px;
-  transition: top 0.3s;
-}
-
-.navbar-hidden {
-  top: -100px;
 }
 
 .navbar ul {
@@ -325,7 +284,7 @@ h6 {
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("assets/img/pinky.jpg") top center;
+  background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
   position: relative;
 }
@@ -509,67 +468,6 @@ section {
   background: #fff;
 }
 
-.services .icon-box .img-fluid
-{
-  width: 200px;
-  height: 40%;
-  margin-bottom: 20%;
-}
-
-.service .icon-box button
-{
-  border: 2px solid black;
-  padding: 1em;
-  width: 80%;
-  cursor: pointer;
-  margin-top: 2em;
-  font-weight: bold;
-  position: relative;
-}
-
-.service .icon-box button::before
-{
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  background-color: black;
-  transition: all .5s;
-  margin: 0;
-}
-
-.service .icon-box button::after
-{
-      content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 0;
-    background-color: black;
-    transition: all .5s;
-}
-
-.services .icon-box img
-{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
-.services .icon-box button
-{
-  border: 2px solid black;
-  padding: 1em;
-  width: 80%;
-  cursor: pointer;
-  margin-top: 2em;
-  font-weight:bold ;
-  position: relative;
-}
-
 .services .icon-box .icon {
   margin: 0 auto;
   width: 64px;
@@ -590,9 +488,9 @@ section {
 }
 
 .services .icon-box h4 {
-  font-weight: 500;
+  font-weight: 700;
   margin-bottom: 15px;
-  font-size: 20px;
+  font-size: 24px;
 }
 
 .services .icon-box h4 a {
